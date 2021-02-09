@@ -1,0 +1,34 @@
+{
+  "name": "web-scraping-demo",
+  "version": "0.0.1",
+  "description": "ทดสอบ",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon",
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && node build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kritsadapk/web-scraping-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kritsadapk/web-scraping-demo/issues"
+  },
+  "homepage": "https://github.com/kritsadapk/web-scraping-demo#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5",
+    "fastify": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
