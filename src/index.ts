@@ -1,7 +1,8 @@
 import cheerio from 'cheerio'
 import axios from 'axios'
 import fastify from 'fastify'
- 
+import functions from 'firebase-functions'
+
 const server = fastify()
 
 
@@ -32,13 +33,21 @@ const getHTML = async () =>{
 }
 
 
-server.get('/', (request, reply) => {
+server.get('/lotto', (request, reply) => {
   getHTML().then(r=>{
     reply.send(r)
   }).catch(error=>{
     console.error(error)
   }) 
 })
+
+// exports.api = functions.https.onRequest((req, res) => {
+//   server.ready((err) => {
+//     if (err) throw err
+//       console.error(err)
+//       process.exit(1)
+//   })
+// })
 
 server.listen(8080, (err, address) => {
   if (err) {
