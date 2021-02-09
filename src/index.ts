@@ -1,7 +1,6 @@
 import cheerio from 'cheerio'
 import axios from 'axios'
-import fastify from 'fastify'
-import functions from 'firebase-functions'
+import fastify from 'fastify' 
 
 const server = fastify()
 
